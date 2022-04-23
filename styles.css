@@ -5,7 +5,6 @@
   --text-low: #757575;
 }
 
-
 *::before,
 *::after {
   box-sizing: border-box;
@@ -102,13 +101,11 @@ body {
   color: var(--main-blue);
 }
 
-.header-list a {
+/* .header-list a {
   display: inline-block;
-}
+} */
 
-.header-list .current {
-  color: var(--main-blue);
-}
+
 
 .header-logo-a {
   color: var(--first-text);
@@ -130,6 +127,22 @@ body {
 .header-item:hover,
 .header-item:focus {
   color: var(--main-blue);
+}
+
+.current {
+  color: var(--main-blue);
+  position: relative;
+}
+
+.current::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--main-blue);
+  border-radius: 2px;
 }
 
 .header-contacts {
@@ -297,6 +310,7 @@ body {
   flex-basis: calc(100% / 3 - 30px);
   width: calc((100% - 90px) / 3);
   margin-left: 30px;
+  position: relative;
 }
 
 .we-do-title {
@@ -307,6 +321,22 @@ body {
   letter-spacing: 0.03em;
   color: var(--first-text);
   margin-bottom: 50px;
+}
+
+.we-do-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
 
 /*--------------OUR-TEAM------------ */
